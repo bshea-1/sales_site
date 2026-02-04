@@ -1,30 +1,30 @@
 /* =====================================================
-   GRAND BRANDS - NEXT.JS GLOBAL STYLES
-   Blue & White Theme with Glass Morphism & Animations
+   ASHLEY FURNITURE - NEXT.JS GLOBAL STYLES
+   Orange & White Theme with Glass Morphism & Animations
    ===================================================== */
 
 :root {
-  /* Colors - Blue & White Theme Only */
-  --color-primary: #0066CC;
-  --color-primary-light: #3399FF;
-  --color-primary-dark: #004999;
-  --color-primary-darker: #003366;
+  /* Colors - Ashley Furniture Orange & White Theme */
+  --color-primary: #E87722;
+  --color-primary-light: #FF9A4D;
+  --color-primary-dark: #C65A00;
+  --color-primary-darker: #1A1A1A;
   --color-white: #FFFFFF;
   --color-gray-lightest: #F8FAFC;
   --color-gray-light: #E2E8F0;
   --color-gray: #94A3B8;
   --color-gray-dark: #475569;
-  --color-black: #1E293B;
+  --color-black: #1A1A1A;
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  --gradient-dark: linear-gradient(135deg, var(--color-primary-darker) 0%, var(--color-primary-dark) 100%);
-  --gradient-hero: linear-gradient(135deg, var(--color-primary-darker) 0%, var(--color-primary) 100%);
+  --gradient-dark: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+  --gradient-hero: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 50%, var(--color-primary-dark) 100%);
 
   /* Glass effect */
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.15);
-  --glass-shadow: 0 8px 32px rgba(0, 51, 102, 0.2);
+  --glass-shadow: 0 8px 32px rgba(232, 119, 34, 0.2);
 
   /* Typography */
   --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -59,11 +59,11 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 102, 204, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 102, 204, 0.07), 0 2px 4px rgba(0, 102, 204, 0.05);
-  --shadow-lg: 0 10px 15px rgba(0, 102, 204, 0.1), 0 4px 6px rgba(0, 102, 204, 0.05);
-  --shadow-xl: 0 20px 25px rgba(0, 102, 204, 0.1), 0 10px 10px rgba(0, 102, 204, 0.04);
-  --shadow-glow: 0 0 40px rgba(0, 102, 204, 0.3);
+  --shadow-sm: 0 1px 2px rgba(232, 119, 34, 0.05);
+  --shadow-md: 0 4px 6px rgba(232, 119, 34, 0.07), 0 2px 4px rgba(232, 119, 34, 0.05);
+  --shadow-lg: 0 10px 15px rgba(232, 119, 34, 0.1), 0 4px 6px rgba(232, 119, 34, 0.05);
+  --shadow-xl: 0 20px 25px rgba(232, 119, 34, 0.1), 0 10px 10px rgba(232, 119, 34, 0.04);
+  --shadow-glow: 0 0 40px rgba(232, 119, 34, 0.3);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -87,8 +87,8 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   color-scheme: dark only;
-  background-color: #003366;
-  /* Deep blue to match theme and prevent white overscroll bars */
+  background-color: #1A1A1A;
+  /* Dark background to match Ashley theme and prevent white overscroll bars */
 }
 
 body {
@@ -185,11 +185,11 @@ em {
 
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 0 20px rgba(232, 119, 34, 0.3);
   }
 
   50% {
-    box-shadow: 0 0 40px rgba(0, 102, 204, 0.5);
+    box-shadow: 0 0 40px rgba(232, 119, 34, 0.5);
   }
 }
 
@@ -220,7 +220,7 @@ em {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(0, 51, 102, 0.95);
+  background: rgba(26, 26, 26, 0.95);
   backdrop-filter: blur(10px);
   height: var(--header-height);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1079,7 +1079,7 @@ em {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  box-shadow: 0 0 0 3px rgba(232, 119, 34, 0.1);
 }
 
 .checkbox-group {

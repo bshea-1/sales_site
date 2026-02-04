@@ -30,7 +30,7 @@ export default function ApplyPage() {
                         {submitted ? (
                             <div style={{ textAlign: 'center', padding: '3rem 2rem' }}>
                                 <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>✅</div>
-                                <h3 style={{ color: '#003366', marginBottom: '1rem', fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>
+                                <h3 style={{ color: '#E87722', marginBottom: '1rem', fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>
                                     Application Submitted!
                                 </h3>
                                 <p style={{ color: '#475569', lineHeight: 1.6 }}>

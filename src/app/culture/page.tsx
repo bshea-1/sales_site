@@ -57,13 +57,13 @@ export default function CulturePage() {
 
 
             {/* MASLOW SECTION */}
-            <section className="section-maslow" style={{ background: 'rgba(0, 73, 153, 0.4)', padding: 'var(--space-4xl) 0', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+            <section className="section-maslow" style={{ background: 'rgba(232, 119, 34, 0.15)', padding: 'var(--space-4xl) 0', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <div className="container">
                     <AnimatedSection>
                         <h2 className="section-title">More Than Maslow</h2>
                         <p className="section-subtitle">We fulfill every level of human needs</p>
 
-                        <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto 4rem', textAlign: 'center', background: 'rgba(0, 102, 204, 0.2)', border: '1px solid rgba(51, 153, 255, 0.3)' }}>
+                        <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto 4rem', textAlign: 'center', background: 'rgba(232, 119, 34, 0.15)', border: '1px solid rgba(255, 154, 77, 0.3)' }}>
                             <h3 style={{ color: 'var(--color-primary-light)', marginBottom: '1rem' }}>What is Maslow&apos;s Hierarchy of Needs?</h3>
                             <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 'var(--text-base)', lineHeight: '1.8' }}>
                                 Abraham Maslow was a visionary psychologist who mapped out the layers of human motivation.
