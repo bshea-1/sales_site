@@ -14,7 +14,7 @@ export default function IdealPlayerPage() {
                 <header className="page-header">
                     <AnimatedSection>
                         <h1 className="page-title">The Ideal Team Player</h1>
-                        <p className="page-subtitle">We seek those who embody three essential virtues</p>
+                        <p className="page-subtitle">The tools you need to climb Maslow&apos;s Hierarchy of Needs</p>
                     </AnimatedSection>
                 </header>
 
@@ -28,13 +28,13 @@ export default function IdealPlayerPage() {
                             </div>
                             <h3 className="card-title">Hungry</h3>
                             <p className="card-description">
-                                A relentless drive for excellence. Always seeking growth, pushing boundaries,
-                                and refusing to settle for mediocrity. You want more—and you&apos;re willing to work for it.
+                                The fuel for your climb. Hunger is the relentless drive to move beyond basic survival
+                                and security toward your ultimate potential. It&apos;s the desire to achieve self-actualization.
                             </p>
                             <ul className="card-traits">
+                                <li>Growth-obsessed</li>
                                 <li>Self-motivated</li>
-                                <li>Proactive</li>
-                                <li>Results-driven</li>
+                                <li>Climbing mindset</li>
                             </ul>
                         </article>
                     </AnimatedSection>
@@ -123,8 +123,8 @@ export default function IdealPlayerPage() {
                         <AnimatedSection delay={400}>
                             <div className="value-item">
                                 <span className="value-number">04</span>
-                                <h3>Family</h3>
-                                <p>78+ years of legacy built on relationships that matter.</p>
+                                <h3>Gratitude</h3>
+                                <p>We celebrate wins and express appreciation. Gratitude is the gear that drives our culture.</p>
                             </div>
                         </AnimatedSection>
                     </div>
