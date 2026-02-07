@@ -9,6 +9,11 @@ export default function Home() {
       <section className="hero">
         <div className="hero-background" />
         <AnimatedSection className="hero-content">
+          <div style={{ marginBottom: '1.5rem' }}>
+            <span style={{ background: 'var(--color-primary-light)', color: 'var(--color-primary-darker)', padding: '0.5rem 1rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>
+              📍 Job Fair – Chesapeake &amp; VA Beach
+            </span>
+          </div>
           <h1 className="hero-headline">
             DON&apos;T JUST WORK.<br />
             <span className="highlight">GO ABOVE &amp; BEYOND.</span>
@@ -24,17 +29,18 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection className="hero-stats" delay={200}>
           <div className="hero-stat">
-            <Counter target={98} prefix="$" suffix="K" />
+            <Counter target={98} prefix="$" suffix="K*" />
             <span className="stat-desc">Average Annual Earnings</span>
           </div>
           <div className="hero-stat">
             <Counter target={78} suffix="+" />
             <span className="stat-desc">Years of Excellence</span>
           </div>
-          <div className="hero-stat">
-            <Counter target={40} suffix="+" />
-            <span className="stat-desc">Years Employee Tenure</span>
-          </div>
+        </AnimatedSection>
+        <AnimatedSection delay={400}>
+          <p className="earnings-disclaimer" style={{ position: 'relative', zIndex: 2, marginTop: '2rem' }}>
+            *Average earnings in 2025 for training academy graduates hired before that year. Individual results vary.
+          </p>
         </AnimatedSection>
       </section>
 
@@ -51,28 +57,28 @@ export default function Home() {
               <div className="glass-card">
                 <div className="card-icon">💰</div>
                 <h3>Financial Security</h3>
-                <p>Our academy graduates average $98,000 annually. Top performers earn significantly more with uncapped commission potential.</p>
+                <p>Our training academy graduates average $98,000* annually. Top performers earn significantly more with uncapped commission potential.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="glass-card">
                 <div className="card-icon">🤝</div>
                 <h3>True Belonging</h3>
-                <p>Join a family that&apos;s been together for 78+ years. We celebrate wins, support each other, and grow as one.</p>
+                <p>Join a family business that&apos;s been operating for 78+ years. We celebrate wins, support each other, and grow as one.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={300}>
               <div className="glass-card">
-                <div className="card-icon">🚀</div>
-                <h3>Self-Actualization</h3>
-                <p>Become the best version of yourself through world-class training, mentorship, and opportunities for advancement.</p>
+                <div className="card-icon">🏆</div>
+                <h3>Recognition Culture</h3>
+                <p>From dinners, to award ceremonies at the most prestigious venues—we celebrate excellence.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={400}>
               <div className="glass-card">
-                <div className="card-icon">🏆</div>
-                <h3>Recognition Culture</h3>
-                <p>From intimate dinners at Craig&apos;s home to award ceremonies at the most prestigious venues—we celebrate excellence.</p>
+                <div className="card-icon">🚀</div>
+                <h3>Growth</h3>
+                <p>Become the best version of yourself through world-class training, mentorship, and opportunities for advancement.</p>
               </div>
             </AnimatedSection>
           </div>
@@ -97,6 +103,6 @@ export default function Home() {
           </AnimatedSection>
         </div>
       </section>
-    </main>
+    </main >
   );
 }

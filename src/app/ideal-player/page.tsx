@@ -21,7 +21,7 @@ export default function IdealPlayerPage() {
                 <div className="card-grid card-grid-3">
                     <AnimatedSection delay={100}>
                         <article className="player-card">
-                            <div className="card-icon-wrapper" style={{ background: 'linear-gradient(135deg, #E87722 0%, #FF9A4D 100%)' }}>
+                            <div className="card-icon-wrapper" style={{ background: 'linear-gradient(135deg, #0066CC 0%, #3399FF 100%)' }}>
                                 <svg width="40" height="40" viewBox="0 0 64 64" fill="currentColor">
                                     <path d="M32 2 L38 24 L50 8 L42 26 L62 32 L42 38 L50 56 L38 40 L32 62 L26 40 L14 56 L22 38 L2 32 L22 26 L14 8 L26 24 Z" />
                                 </svg>
@@ -41,7 +41,7 @@ export default function IdealPlayerPage() {
 
                     <AnimatedSection delay={200}>
                         <article className="player-card">
-                            <div className="card-icon-wrapper" style={{ background: 'linear-gradient(135deg, #C65A00 0%, #E87722 100%)' }}>
+                            <div className="card-icon-wrapper" style={{ background: 'linear-gradient(135deg, #004999 0%, #0066CC 100%)' }}>
                                 <svg width="40" height="40" viewBox="0 0 64 64" fill="currentColor">
                                     <circle cx="32" cy="20" r="12" />
                                     <path d="M32 36 C16 36 8 48 8 56 L56 56 C56 48 48 36 32 36 Z" />
@@ -64,7 +64,7 @@ export default function IdealPlayerPage() {
 
                     <AnimatedSection delay={300}>
                         <article className="player-card">
-                            <div className="card-icon-wrapper" style={{ background: 'linear-gradient(135deg, #1A1A1A 0%, #C65A00 100%)' }}>
+                            <div className="card-icon-wrapper" style={{ background: 'linear-gradient(135deg, #003366 0%, #004999 100%)' }}>
                                 <svg width="40" height="40" viewBox="0 0 64 64" fill="currentColor">
                                     <ellipse cx="32" cy="28" rx="24" ry="20" />
                                     <path d="M24 48 L24 58 Q32 64 40 58 L40 48" />

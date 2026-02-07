@@ -20,7 +20,7 @@ const merriweather = Merriweather({
 
 export const metadata: Metadata = {
   title: 'Ashley Furniture | Go Above and Beyond',
-  description: 'Join Ashley Furniture, the #1 furniture retailer in America. We offer financial security, belonging, and a path to going above and beyond. Academy graduates average $98,000 annually.',
+  description: 'Join Ashley Furniture, the #1 furniture retailer in America. We offer financial security, belonging, and a path to going above and beyond. Training academy graduates average $98,000 annually.',
   keywords: 'Ashley Furniture, sales career, furniture sales, above and beyond',
 };
 

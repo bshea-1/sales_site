@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'The Opportunity | Ashley Furniture',
-    description: 'Uncapped earning potential at Ashley Furniture. Academy graduates average $98,000 annually with top performers earning significantly more.',
+    description: 'Uncapped earning potential at Ashley Furniture. Training academy graduates average $98,000 annually with top performers earning significantly more.',
 };
 
 export default function OpportunityPage() {
@@ -21,8 +21,8 @@ export default function OpportunityPage() {
                 <div className="card-grid card-grid-3">
                     <AnimatedSection delay={100}>
                         <div className="earnings-card featured">
-                            <span className="earnings-label">Academy Graduates Average</span>
-                            <span className="earnings-amount">$98,000</span>
+                            <span className="earnings-label">Training Academy Graduates Average</span>
+                            <span className="earnings-amount">$98,000*</span>
                             <span className="earnings-period">Annually</span>
                         </div>
                     </AnimatedSection>
@@ -35,12 +35,15 @@ export default function OpportunityPage() {
                     </AnimatedSection>
                     <AnimatedSection delay={300}>
                         <div className="earnings-card">
-                            <span className="earnings-label">Legacy of Stability</span>
-                            <span className="earnings-amount">40+ Years</span>
-                            <span className="earnings-period">Employee Tenure</span>
+                            <span className="earnings-label">Stability &amp; Growth</span>
+                            <span className="earnings-amount">78+ Years</span>
+                            <span className="earnings-period">Company History</span>
                         </div>
                     </AnimatedSection>
                 </div>
+                <AnimatedSection delay={400}>
+                    <p className="earnings-disclaimer">*Average earnings in 2025 for training academy graduates hired before that year. Individual results vary.</p>
+                </AnimatedSection>
             </div>
 
             {/* WHAT YOU GET SECTION */}
@@ -61,7 +64,7 @@ export default function OpportunityPage() {
                             <div className="glass-card" style={{ textAlign: 'center' }}>
                                 <div className="card-icon">👨‍🏫</div>
                                 <h3>Mentorship</h3>
-                                <p>Learn from top performers with 40+ years of experience who genuinely want to see you win.</p>
+                                <p>Learn from top performers who genuinely want to see you win.</p>
                             </div>
                         </AnimatedSection>
                         <AnimatedSection delay={300}>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const testimonials = [
     { badge: 'Security', quote: 'Please do not EVER underestimate the security that you give others due to the financial security that you provide.', icon: '🛡️', author: 'Ashley Furniture Team Member' },
-    { badge: 'Security', quote: 'Ashley Furniture has been around for over 78 years and our tenure of top performers is evident with employees with over 40 years of experience that continue to grow and flourish.', icon: '⏳', author: 'Long-Tenured Associate' },
+    { badge: 'Security', quote: 'Ashley Furniture has been around for over 78 years and our legacy of long-tenured top performers is evident with employees that continue to grow and flourish.', icon: '⏳', author: 'Long-Tenured Associate' },
     { badge: 'Belonging', quote: 'Thank you for accepting me, my authentic self, and thank you for giving me a sense of purpose and importance. You have fulfilled the entire professional journey for me.', icon: '❤️', author: 'Ashley Furniture Team Member' },
     { badge: 'Belonging', quote: 'I truly value your mentorship and guidance and it has made me not only a better person, but a better father, and husband.', icon: '🌟', author: 'Ashley Furniture Team Member' },
     { badge: 'Impact', quote: 'Listening to those stories made me want to do better in my role and continue to contribute in a positive way. It served as a genuine recharge.', icon: '⚡', author: 'Above and Beyond Dinner Attendee' },

@@ -57,13 +57,12 @@ export default function CulturePage() {
 
 
             {/* MASLOW SECTION */}
-            <section className="section-maslow" style={{ background: 'rgba(232, 119, 34, 0.15)', padding: 'var(--space-4xl) 0', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+            <section className="section-maslow" style={{ background: 'rgba(0, 0, 0, 0.2)', padding: 'var(--space-4xl) 0', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <div className="container">
                     <AnimatedSection>
                         <h2 className="section-title">More Than Maslow</h2>
                         <p className="section-subtitle">We fulfill every level of human needs</p>
-
-                        <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto 4rem', textAlign: 'center', background: 'rgba(232, 119, 34, 0.15)', border: '1px solid rgba(255, 154, 77, 0.3)' }}>
+                        <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto 4rem', textAlign: 'center' }}>
                             <h3 style={{ color: 'var(--color-primary-light)', marginBottom: '1rem' }}>What is Maslow&apos;s Hierarchy of Needs?</h3>
                             <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 'var(--text-base)', lineHeight: '1.8' }}>
                                 Abraham Maslow was a visionary psychologist who mapped out the layers of human motivation.
@@ -104,10 +103,13 @@ export default function CulturePage() {
                         <AnimatedSection delay={300}>
                             <div className="maslow-level level-1">
                                 <span className="level-name">Basic Needs</span>
-                                <span className="level-desc">Competitive compensation averaging $98K annually</span>
+                                <span className="level-desc">Competitive compensation averaging $98K* annually</span>
                             </div>
                         </AnimatedSection>
                     </div>
+                    <p className="earnings-disclaimer" style={{ color: 'rgba(255, 255, 255, 0.6)', marginTop: '2rem', textAlign: 'center', fontStyle: 'italic', fontSize: 'var(--text-xs)' }}>
+                        *Average earnings in 2025 for training academy graduates hired before that year. Individual results vary.
+                    </p>
                 </div>
             </section>
 
