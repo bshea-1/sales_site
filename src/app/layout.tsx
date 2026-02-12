@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Montserrat, Merriweather } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
+import TopBanner from '@/components/layout/TopBanner';
 import Footer from '@/components/layout/Footer';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable} ${merriweather.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <ScrollToTop />
+        <TopBanner />
         <Header />
         {children}
         <Footer />

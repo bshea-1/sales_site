@@ -15,7 +15,8 @@ export default function Footer() {
                     <Link href="/gratitude">Gratitude</Link>
                     <Link href="/culture">Culture</Link>
                     <Link href="/opportunity">Opportunity</Link>
-                    <Link href="/apply">Apply Now</Link>
+                    <Link href="/maslow">Maslow</Link>
+                    <Link href="/apply">Job Fair Info</Link>
                 </div>
             </div>
         </footer>

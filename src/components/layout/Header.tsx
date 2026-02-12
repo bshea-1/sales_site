@@ -10,6 +10,7 @@ const navLinks = [
     { href: '/gratitude', label: 'Gratitude' },
     { href: '/culture', label: 'Culture' },
     { href: '/opportunity', label: 'Opportunity' },
+    { href: '/maslow', label: 'Maslow' },
 ];
 
 export default function Header() {
@@ -56,7 +57,7 @@ export default function Header() {
                         </Link>
                     ))}
                     <Link href="/apply" className="nav-link nav-cta">
-                        Apply Now
+                        Job Fair Info
                     </Link>
                 </nav>
             </div>

@@ -9,11 +9,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-background" />
         <AnimatedSection className="hero-content">
-          <div style={{ marginBottom: '1.5rem' }}>
-            <span style={{ background: 'var(--color-primary-light)', color: 'var(--color-primary-darker)', padding: '0.5rem 1rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>
-              📍 Job Fair – Chesapeake &amp; VA Beach
-            </span>
-          </div>
+
           <h1 className="hero-headline">
             DON&apos;T JUST WORK.<br />
             <span className="highlight">GO ABOVE &amp; BEYOND.</span>
@@ -22,15 +18,18 @@ export default function Home() {
             Join the <strong>#1 Furniture Retailer in America</strong>. We don&apos;t just offer jobs;
             we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
           </p>
-          <Link href="/apply" className="btn btn-primary btn-glow">
-            <span className="btn-icon">🔥</span>
-            I Am Hungry, Humble, &amp; Smart
+          <Link href="/apply" className="btn btn-primary btn-glow btn-large">
+            Click here to learn more about our upcoming job fair
           </Link>
         </AnimatedSection>
         <AnimatedSection className="hero-stats" delay={200}>
           <div className="hero-stat">
+            <Counter target={75} prefix="$" suffix="K*" />
+            <span className="stat-desc">Average New Hire Annual Earnings</span>
+          </div>
+          <div className="hero-stat">
             <Counter target={98} prefix="$" suffix="K*" />
-            <span className="stat-desc">Average Annual Earnings</span>
+            <span className="stat-desc">Average Sales Person Earnings</span>
           </div>
           <div className="hero-stat">
             <Counter target={78} suffix="+" />
@@ -39,7 +38,7 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection delay={400}>
           <p className="earnings-disclaimer" style={{ position: 'relative', zIndex: 2, marginTop: '2rem' }}>
-            *Average earnings in 2025 for training academy graduates hired before that year. Individual results vary.
+            *Sales Associates hired prior to January 31st, 2024. Individual results vary.
           </p>
         </AnimatedSection>
       </section>
@@ -71,7 +70,7 @@ export default function Home() {
               <div className="glass-card">
                 <div className="card-icon">🏆</div>
                 <h3>Recognition Culture</h3>
-                <p>From dinners, to award ceremonies at the most prestigious venues—we celebrate excellence.</p>
+                <p>From quarterly dinners to award ceremonies at the tallest building in Virginia—we celebrate excellence.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={400}>

@@ -42,9 +42,55 @@ export default function OpportunityPage() {
                     </AnimatedSection>
                 </div>
                 <AnimatedSection delay={400}>
-                    <p className="earnings-disclaimer">*Average earnings in 2025 for training academy graduates hired before that year. Individual results vary.</p>
+                    <p className="earnings-disclaimer">*Sales Associates hired prior to January 31st, 2024. Individual results vary.</p>
                 </AnimatedSection>
             </div>
+
+            {/* POSITION DESCRIPTION SECTION */}
+            <section className="section-light">
+                <div className="container">
+                    <AnimatedSection>
+                        <h2 className="section-title">About the Position</h2>
+                        <p className="section-subtitle">What you need to know before you apply</p>
+                    </AnimatedSection>
+                    <div className="card-grid card-grid-2" style={{ maxWidth: '900px', margin: '0 auto' }}>
+                        <AnimatedSection delay={100}>
+                            <div className="glass-card">
+                                <div className="card-icon">🛋️</div>
+                                <h3>Sales Associate</h3>
+                                <p>Join our team as a Sales Associate and learn from the best in the industry. No prior furniture sales experience required—our world-class training academy will give you everything you need to succeed.</p>
+                            </div>
+                        </AnimatedSection>
+                        <AnimatedSection delay={200}>
+                            <div className="glass-card">
+                                <div className="card-icon">⭐</div>
+                                <h3>Senior Sales Associate</h3>
+                                <p>Experienced sales professionals can hit the ground running. Leverage your existing skills with our proven systems and uncapped commission structure to maximize your earning potential.</p>
+                            </div>
+                        </AnimatedSection>
+                    </div>
+                    <AnimatedSection delay={300}>
+                        <div className="transparency-box" style={{ marginTop: '2rem', maxWidth: '900px', marginLeft: 'auto', marginRight: 'auto' }}>
+                            <h3 className="transparency-title">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                Schedule Requirements
+                            </h3>
+                            <div className="transparency-points">
+                                <div className="point">✓ Full-time position (5 days per week)</div>
+                                <div className="point">✓ Must be available weekends (Saturday &amp; Sunday)</div>
+                                <div className="point">✓ Two consecutive weekdays off</div>
+                                <div className="point">✓ Store hours typically 10 AM – 9 PM</div>
+                                <div className="point">✓ Holiday availability expected during peak retail seasons</div>
+                            </div>
+                        </div>
+                    </AnimatedSection>
+                </div>
+            </section>
 
             {/* WHAT YOU GET SECTION */}
             <section className="section-dark">
@@ -129,7 +175,7 @@ export default function OpportunityPage() {
             <div className="page-cta">
                 <AnimatedSection>
                     <Link href="/apply" className="btn btn-primary btn-large btn-glow">
-                        Ready? Apply Now →
+                        Learn More About Our Upcoming Job Fair →
                     </Link>
                 </AnimatedSection>
             </div>

@@ -14,7 +14,7 @@ export default function IdealPlayerPage() {
                 <header className="page-header">
                     <AnimatedSection>
                         <h1 className="page-title">The Ideal Team Player</h1>
-                        <p className="page-subtitle">The tools you need to climb Maslow&apos;s Hierarchy of Needs</p>
+                        <p className="page-subtitle">The tools you need to build the life you deserve</p>
                     </AnimatedSection>
                 </header>
 
@@ -28,8 +28,8 @@ export default function IdealPlayerPage() {
                             </div>
                             <h3 className="card-title">Hungry</h3>
                             <p className="card-description">
-                                The fuel for your climb. Hunger is the relentless drive to move beyond basic survival
-                                and security toward your ultimate potential. It&apos;s the desire to achieve self-actualization.
+                                The fuel for your success. Hunger is the relentless drive to earn more,
+                                feel important, and find a true sense of belonging in a winning team.
                             </p>
                             <ul className="card-traits">
                                 <li>Growth-obsessed</li>
@@ -72,13 +72,13 @@ export default function IdealPlayerPage() {
                             </div>
                             <h3 className="card-title">Smart</h3>
                             <p className="card-description">
-                                High emotional intelligence. Collaborates effectively, resolves conflict
-                                with grace, and understands how words and actions impact others.
+                                The intelligence to execute. Smart means having the mental agility to learn and implement
+                                our proven sales process, while maintaining the hunger and humility to win.
                             </p>
                             <ul className="card-traits">
-                                <li>High EQ</li>
-                                <li>Effective communicator</li>
-                                <li>Conflict resolver</li>
+                                <li>Quick learner</li>
+                                <li>Process-driven</li>
+                                <li>High execution</li>
                             </ul>
                         </article>
                     </AnimatedSection>
