@@ -57,7 +57,7 @@ export default function Header() {
                         </Link>
                     ))}
                     <Link href="/apply" className="nav-link nav-cta">
-                        Job Fair Info
+                        Reserve Interview
                     </Link>
                 </nav>
             </div>

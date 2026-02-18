@@ -591,10 +591,10 @@ em {
 }
 
 .hero-headline {
-  font-size: var(--text-5xl);
+  font-size: var(--text-4xl);
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin-bottom: var(--space-lg);
   line-height: 1.1;
 }
@@ -602,6 +602,7 @@ em {
 .hero-headline .highlight {
   color: var(--color-primary-light);
   display: block;
+  margin-top: var(--space-md);
   text-shadow: 0 0 40px rgba(51, 153, 255, 0.5);
 }
 
@@ -620,6 +621,101 @@ em {
 .hero-subheadline em {
   color: var(--color-primary-light);
   font-style: normal;
+}
+
+/* Hero layout adjustment — spread content vertically */
+.hero-content-upper {
+  margin-bottom: 0;
+  padding-top: var(--space-xl);
+}
+
+.hero-content-upper .hero-headline {
+  margin-bottom: 0;
+}
+
+.hero-event-details {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.event-info {
+  text-align: center;
+}
+
+.event-date {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.event-time {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  color: var(--color-primary-light);
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+  text-shadow: 0 0 30px rgba(51, 153, 255, 0.4);
+}
+
+.event-address {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-top: var(--space-lg);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.event-address+.event-address {
+  margin-top: 0;
+}
+
+.hero-content-lower {
+  margin-top: var(--space-md);
+}
+
+.hero-content-lower .hero-subheadline {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .event-date {
+    font-size: var(--text-2xl);
+  }
+
+  .event-time {
+    font-size: var(--text-xl);
+  }
+
+  .event-address {
+    font-size: var(--text-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .event-date {
+    font-size: var(--text-xl);
+    letter-spacing: 1px;
+  }
+
+  .event-time {
+    font-size: var(--text-lg);
+    letter-spacing: 2px;
+  }
+
+  .event-address {
+    font-size: var(--text-base);
+  }
 }
 
 .hero-stats {
@@ -730,7 +826,7 @@ em {
   }
 
   .hero-headline {
-    font-size: clamp(2rem, 10vw, 2.5rem);
+    font-size: var(--text-2xl);
     word-wrap: break-word;
     /* Ensure long words don't overflow */
   }

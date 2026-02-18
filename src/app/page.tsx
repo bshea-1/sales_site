@@ -8,24 +8,35 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-background" />
-        <AnimatedSection className="hero-content">
-
+        <AnimatedSection className="hero-content hero-content-upper">
           <h1 className="hero-headline">
-            DON&apos;T JUST WORK.<br />
-            <span className="highlight">GO ABOVE &amp; BEYOND.</span>
+            JOIN US AT OUR NEXT<br />
+            <span className="highlight">SALES ASSOCIATE<br />JOB FAIR</span>
           </h1>
-          <p className="hero-subheadline">
+        </AnimatedSection>
+
+        <AnimatedSection className="hero-content hero-event-details" delay={100}>
+          <div className="event-info">
+            <p className="event-date">Thursday, February 19th</p>
+            <p className="event-time">11 AM – 7 PM</p>
+            <p className="event-address">Ashley Outlet</p>
+            <p className="event-address">5129 Virginia Beach Blvd</p>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection className="hero-content hero-content-lower" delay={200}>
+          <p className="hero-subheadline" style={{ marginBottom: 'var(--space-xl)' }}>
             Join the <strong>#1 Furniture Retailer in America</strong>. We don&apos;t just offer jobs;
             we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
           </p>
           <Link href="/apply" className="btn btn-primary btn-glow btn-large">
-            Click here to learn more about our upcoming job fair
+            CLICK HERE IF YOU WANT TO RESERVE AN INTERVIEW
           </Link>
         </AnimatedSection>
-        <AnimatedSection className="hero-stats" delay={200}>
+        <AnimatedSection className="hero-stats" delay={300}>
           <div className="hero-stat">
             <Counter target={75} prefix="$" suffix="K*" />
-            <span className="stat-desc">Average New Hire Annual Earnings</span>
+            <span className="stat-desc">Lowest Sales Person Earnings</span>
           </div>
           <div className="hero-stat">
             <Counter target={98} prefix="$" suffix="K*" />
@@ -36,9 +47,9 @@ export default function Home() {
             <span className="stat-desc">Years of Excellence</span>
           </div>
         </AnimatedSection>
-        <AnimatedSection delay={400}>
+        <AnimatedSection delay={500}>
           <p className="earnings-disclaimer" style={{ position: 'relative', zIndex: 2, marginTop: '2rem' }}>
-            *Sales Associates hired prior to January 31st, 2024. Individual results vary.
+            *Sales Associates hired prior to January 1st, 2024. Individual results vary.
           </p>
         </AnimatedSection>
       </section>
