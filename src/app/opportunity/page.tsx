@@ -175,7 +175,7 @@ export default function OpportunityPage() {
             <div className="page-cta">
                 <AnimatedSection>
                     <Link href="/apply" className="btn btn-primary btn-large btn-glow">
-                        Learn More About Our Upcoming Job Fair →
+                        Apply Now →
                     </Link>
                 </AnimatedSection>
             </div>

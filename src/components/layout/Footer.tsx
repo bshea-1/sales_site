@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AshleyLogo from '@/components/ui/AshleyLogo';
 
 export default function Footer() {
     return (
@@ -6,7 +7,7 @@ export default function Footer() {
             <div className="footer-content">
                 <div className="footer-brand">
                     <Link href="/" className="nav-logo">
-                        <span className="logo-grand">Ashley</span><span className="logo-brands">Furniture</span>
+                        <AshleyLogo style={{ height: '24px', width: 'auto' }} />
                     </Link>
                     <p>The #1 Furniture Retailer in America | 78+ Years of Excellence</p>
                 </div>
@@ -16,7 +17,7 @@ export default function Footer() {
                     <Link href="/culture">Culture</Link>
                     <Link href="/opportunity">Opportunity</Link>
                     <Link href="/maslow">Maslow</Link>
-                    <Link href="/apply">Job Fair Info</Link>
+                    <Link href="/apply">Apply Now</Link>
                 </div>
             </div>
         </footer>

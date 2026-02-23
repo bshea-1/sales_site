@@ -20,7 +20,7 @@ export default function MaslowPage() {
 
                 <AnimatedSection>
                     <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto 4rem', textAlign: 'center' }}>
-                        <h2 style={{ color: 'var(--color-primary-light)', marginBottom: '1rem', fontFamily: 'var(--font-heading)', fontSize: 'var(--text-xl)' }}>What is Maslow&apos;s Hierarchy of Needs?</h2>
+                        <h2 style={{ color: 'var(--color-primary-light)', marginBottom: '1rem', fontFamily: 'var(--ff-heading)', fontSize: 'var(--text-xl)' }}>What is Maslow&apos;s Hierarchy of Needs?</h2>
                         <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 'var(--text-base)', lineHeight: '1.8' }}>
                             Abraham Maslow was a visionary psychologist who mapped out the layers of human motivation.
                             His theory shows that we all have a natural drive to move from meeting basic survival needs

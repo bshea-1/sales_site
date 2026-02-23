@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Montserrat, Merriweather } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import TopBanner from '@/components/layout/TopBanner';
@@ -10,15 +10,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-heading',
+  variable: '--font-montserrat',
   display: 'swap',
-});
-
-const merriweather = Merriweather({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-body',
-  display: 'swap',
+  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${merriweather.variable}`} suppressHydrationWarning>
+    <html lang="en" className={montserrat.variable} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <ScrollToTop />
         <TopBanner />

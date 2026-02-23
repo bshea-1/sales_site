@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import Counter from '@/components/ui/Counter';
+import ScrollIndicator from '@/components/ui/ScrollIndicator';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
 
         <AnimatedSection className="hero-content hero-event-details" delay={100}>
           <div className="event-info">
-            <p className="event-date">Thursday, February 19th</p>
+            <p className="event-date">Thursday, March 19th</p>
             <p className="event-time">11 AM – 7 PM</p>
             <p className="event-address">Ashley Outlet</p>
             <p className="event-address">5129 Virginia Beach Blvd</p>
@@ -25,12 +26,12 @@ export default function Home() {
         </AnimatedSection>
 
         <AnimatedSection className="hero-content hero-content-lower" delay={200}>
-          <p className="hero-subheadline" style={{ marginBottom: 'var(--space-xl)' }}>
+          <p className="hero-subheadline">
             Join the <strong>#1 Furniture Retailer in America</strong>. We don&apos;t just offer jobs;
             we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
           </p>
           <Link href="/apply" className="btn btn-primary btn-glow btn-large">
-            CLICK HERE IF YOU WANT TO RESERVE AN INTERVIEW
+            CLICK HERE IF YOU WANT TO RSVP
           </Link>
         </AnimatedSection>
         <AnimatedSection className="hero-stats" delay={300}>
@@ -48,7 +49,8 @@ export default function Home() {
           </div>
         </AnimatedSection>
         <AnimatedSection delay={500}>
-          <p className="earnings-disclaimer" style={{ position: 'relative', zIndex: 2, marginTop: '2rem' }}>
+          <ScrollIndicator />
+          <p className="earnings-disclaimer">
             *Sales Associates hired prior to January 1st, 2024. Individual results vary.
           </p>
         </AnimatedSection>

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import AshleyLogo from '@/components/ui/AshleyLogo';
 
 const navLinks = [
     { href: '/', label: 'Home' },
@@ -35,7 +36,7 @@ export default function Header() {
         <header className="header">
             <div className="header-container">
                 <Link href="/" className="nav-logo">
-                    <span className="logo-grand">Ashley</span><span className="logo-brands">Furniture</span>
+                    <AshleyLogo style={{ height: '28px', width: 'auto' }} />
                 </Link>
 
                 <button
@@ -57,7 +58,7 @@ export default function Header() {
                         </Link>
                     ))}
                     <Link href="/apply" className="nav-link nav-cta">
-                        Reserve Interview
+                        Apply Now
                     </Link>
                 </nav>
             </div>
