@@ -25,7 +25,7 @@ export default function ScrollIndicator() {
                 color: 'var(--color-primary)',
                 fontSize: '2rem',
                 textAlign: 'center',
-                marginTop: '2rem',
+                marginTop: '0.5rem',
                 opacity: isVisible ? 0.8 : 0,
                 transition: 'opacity 0.3s ease-in-out',
                 pointerEvents: 'none',
