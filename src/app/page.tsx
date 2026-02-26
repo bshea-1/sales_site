@@ -31,7 +31,7 @@ export default function Home() {
             we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
           </p>
           <Link href="/apply" className="btn btn-primary btn-glow btn-large">
-            CLICK HERE IF YOU WANT TO RSVP
+            CLICK HERE TO APPLY
           </Link>
         </AnimatedSection>
         <AnimatedSection className="hero-stats" delay={300}>

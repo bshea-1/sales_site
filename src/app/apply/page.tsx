@@ -1,127 +1,97 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import AnimatedSection from '@/components/ui/AnimatedSection';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import AshleyLogo from '@/components/ui/AshleyLogo';
 
 const WORKABLE_LINK = "https://apply.workable.com/allgrandbrands/?lng=en";
 
 export default function ApplyPage() {
-    const [submitted, setSubmitted] = useState(false);
+    const [countdown, setCountdown] = useState(3);
 
     useEffect(() => {
-        if (submitted) {
-            const timer = setTimeout(() => {
-                window.open(WORKABLE_LINK, '_blank');
-            }, 3000);
+        if (countdown > 0) {
+            const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
             return () => clearTimeout(timer);
+        } else {
+            window.open(WORKABLE_LINK, '_blank');
         }
-    }, [submitted]);
+    }, [countdown]);
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        const formData = new FormData(e.target as HTMLFormElement);
-        // Using the existing formspree logic we had in previous versions
-        fetch('https://formspree.io/f/xvgzyjko', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                Accept: 'application/json',
-            },
-        }).then(() => {
-            setSubmitted(true);
-        }).catch(() => {
-            // fallback if formspree isn't setup
-            setSubmitted(true);
-        });
-    };
+    // Calculate stroke dashoffset for the ring
+    const circumference = 2 * Math.PI * 54; // r=54 for 120px ring with stroke 4
+    const strokeDashoffset = circumference - (countdown / 3) * circumference;
 
     return (
-        <main className="apply-page">
-            <div className="apply-content">
-                <AnimatedSection>
-                    <h1 className="apply-headline" style={{ marginTop: '2rem' }}>Experience Our Unique Culture!</h1>
-                    <p style={{ color: 'var(--color-primary)', fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.5rem' }}>
-                        Attend Our Upcoming Job Fair: March 19th
-                    </p>
-                    <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', fontWeight: 600, marginBottom: '2rem' }}>
-                        Location: Ashley Outlet At 5129 Virginia Beach Blvd
-                    </p>
-                </AnimatedSection>
+        <main className="redirect-page">
+            <div className="redirect-bg-orb redirect-bg-orb-1" />
+            <div className="redirect-bg-orb redirect-bg-orb-2" />
+            <div className="redirect-bg-orb redirect-bg-orb-3" />
 
-                <AnimatedSection delay={100}>
-                    <div className="apply-form-container" style={{ maxWidth: '600px', margin: '0 auto' }}>
-                        {submitted ? (
-                            <div className="glass-card" style={{ textAlign: 'center', padding: '4rem 2rem' }}>
-                                <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🎉</div>
-                                <h2 style={{ marginBottom: '1rem', fontFamily: 'var(--ff-heading)', fontSize: '1.5rem', fontWeight: 800 }}>
-                                    RSVP Confirmed!
-                                </h2>
-                                <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, marginBottom: '1rem' }}>
-                                    We have received your RSVP for the Thursday, March 19th job fair.<br />
-                                    We look forward to meeting you!
-                                </p>
-                                <p style={{ color: '#fff', fontSize: '0.95rem', marginBottom: '2rem' }}>
-                                    Opening the application page in 3 seconds...<br />
-                                    <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>
-                                        If it didn&apos;t open, <a href={WORKABLE_LINK} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--color-primary)' }}>click here</a>.
-                                    </span>
-                                </p>
-                                <Link href="/" className="btn btn-primary">
-                                    Return to Home
-                                </Link>
-                            </div>
-                        ) : (
-                            <form className="apply-form" onSubmit={handleSubmit} style={{ padding: '2rem', borderRadius: 'var(--radius-lg)' }}>
-                                <div style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
-                                    <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontFamily: 'var(--ff-heading)', fontWeight: 800 }}>
-                                        Job Fair RSVP
-                                    </h2>
-                                    <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>
-                                        Let us know you&apos;re coming on Thursday, March 19th!
-                                    </p>
-                                </div>
+            <div className="redirect-card">
+                <div className="redirect-logo">
+                    <span className="logo-grand" style={{ color: '#fff' }}>GRAND</span>
+                    <span className="logo-brands" style={{ color: 'var(--color-primary)' }}>BRANDS</span>
+                </div>
 
-                                <div className="form-group">
-                                    <label htmlFor="fullName">Full Name</label>
-                                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">Email Address</label>
-                                    <input type="email" id="email" name="email" required placeholder="Enter your email" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" />
-                                </div>
+                <div className="redirect-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </div>
 
-                                <div className="form-group checkbox-group" style={{ marginTop: '1rem' }}>
-                                    <label className="checkbox-label">
-                                        <input type="checkbox" name="availability" required style={{ marginTop: '0.25rem' }} />
-                                        <span style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', textAlign: 'left' }}>I confirm I can attend the job fair on Thursday, March 19th at the Ashley Outlet.</span>
-                                    </label>
-                                </div>
+                <h1 className="redirect-title">
+                    Redirecting to <span className="redirect-highlight">Application</span>
+                </h1>
 
-                                <button type="submit" className="btn btn-primary btn-large btn-block" style={{ width: '100%', marginTop: '1.5rem', display: 'flex', justifyContent: 'center', gap: '0.5rem' }}>
-                                    RSVP Now
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M5 12h14m-7-7 7 7-7 7" />
-                                    </svg>
-                                </button>
-                            </form>
-                        )}
+                <p className="redirect-subtitle">
+                    You are being transferred to our official Workable application portal. Please wait a moment.
+                </p>
+
+                <div className="redirect-countdown-container">
+                    <svg className="redirect-ring" width="120" height="120" viewBox="0 0 120 120">
+                        <circle className="redirect-ring-bg" cx="60" cy="60" r="54" />
+                        <circle
+                            className="redirect-ring-progress"
+                            cx="60" cy="60" r="54"
+                            style={{
+                                strokeDasharray: circumference,
+                                strokeDashoffset: strokeDashoffset
+                            }}
+                        />
+                    </svg>
+                    <div className="redirect-countdown-text">
+                        <span className={`redirect-countdown-number ${countdown ? 'redirect-number-pop' : ''}`} key={countdown}>
+                            {countdown}
+                        </span>
+                        <span className="redirect-countdown-label">Seconds</span>
                     </div>
-                </AnimatedSection>
+                </div>
 
-                <AnimatedSection delay={200}>
-                    <div style={{ textAlign: 'center', marginTop: '4rem', paddingBottom: '4rem' }}>
-                        <AshleyLogo style={{ height: '40px', width: 'auto', margin: '0 auto' }} />
-                        <p style={{ fontSize: 'var(--text-sm)', color: 'rgba(255,255,255,0.6)', marginTop: 'var(--space-sm)' }}>
-                            The #1 Furniture Retailer in America | 78+ Years of Excellence
-                        </p>
-                    </div>
-                </AnimatedSection>
+                <p className="redirect-subtitle" style={{ fontSize: '1rem', marginTop: '1rem' }}>
+                    If the new tab didn&apos;t open automatically, <a href={WORKABLE_LINK} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--color-primary)', fontWeight: 'bold' }}>click here</a>.
+                </p>
+
+                <div className="redirect-actions" style={{ marginTop: '1.5rem' }}>
+                    <a href={WORKABLE_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-primary redirect-go-btn">
+                        Open Workable Application
+                    </a>
+                </div>
+
+                <div className="redirect-divider" />
+
+                <Link href="/" className="redirect-back-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12" />
+                        <polyline points="12 19 5 12 12 5" />
+                    </svg>
+                    Return to Home
+                </Link>
+
+                <div className="redirect-footer">
+                    Secure Application via Workable
+                </div>
             </div>
         </main>
     );
