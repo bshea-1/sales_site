@@ -1,12 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import Link from 'next/link';
 import AshleyLogo from '@/components/ui/AshleyLogo';
 
+const WORKABLE_LINK = "https://apply.workable.com/allgrandbrands/?lng=en";
+
 export default function ApplyPage() {
     const [submitted, setSubmitted] = useState(false);
+
+    useEffect(() => {
+        if (submitted) {
+            const timer = setTimeout(() => {
+                window.open(WORKABLE_LINK, '_blank');
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [submitted]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -47,9 +58,15 @@ export default function ApplyPage() {
                                 <h2 style={{ marginBottom: '1rem', fontFamily: 'var(--ff-heading)', fontSize: '1.5rem', fontWeight: 800 }}>
                                     RSVP Confirmed!
                                 </h2>
-                                <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, marginBottom: '2rem' }}>
+                                <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, marginBottom: '1rem' }}>
                                     We have received your RSVP for the Thursday, March 19th job fair.<br />
                                     We look forward to meeting you!
+                                </p>
+                                <p style={{ color: '#fff', fontSize: '0.95rem', marginBottom: '2rem' }}>
+                                    Opening the application page in 3 seconds...<br />
+                                    <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>
+                                        If it didn&apos;t open, <a href={WORKABLE_LINK} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--color-primary)' }}>click here</a>.
+                                    </span>
                                 </p>
                                 <Link href="/" className="btn btn-primary">
                                     Return to Home
