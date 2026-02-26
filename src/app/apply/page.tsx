@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import AshleyLogo from '@/components/ui/AshleyLogo';
 
 const WORKABLE_LINK = "https://apply.workable.com/allgrandbrands/?lng=en";
 
@@ -28,9 +29,8 @@ export default function ApplyPage() {
             <div className="redirect-bg-orb redirect-bg-orb-3" />
 
             <div className="redirect-card">
-                <div className="redirect-logo">
-                    <span className="logo-grand" style={{ color: '#fff' }}>GRAND</span>
-                    <span className="logo-brands" style={{ color: 'var(--color-primary)' }}>BRANDS</span>
+                <div className="redirect-logo" style={{ marginBottom: '2rem' }}>
+                    <AshleyLogo style={{ height: '36px', width: 'auto', color: '#fff' }} />
                 </div>
 
                 <div className="redirect-icon">
