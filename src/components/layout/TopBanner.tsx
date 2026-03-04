@@ -16,6 +16,8 @@ export default function TopBanner() {
                 <div className="marquee-content">
                     <span>{combinedText}</span>
                     <span>{combinedText}</span>
+                    <span>{combinedText}</span>
+                    <span>{combinedText}</span>
                 </div>
             </div>
         </div>
