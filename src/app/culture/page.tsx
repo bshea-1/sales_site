@@ -109,29 +109,29 @@ export default function CulturePage() {
                                 <button onClick={() => setHeartTab('personal')} className={`btn btn-sm ${heartTab === 'personal' ? 'btn-primary' : 'btn-outline'}`} style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}>Personal Excellence</button>
                             </div>
 
-                            <div style={{ background: '#FFFFFF', padding: '1.5rem', borderRadius: 'var(--radius-md)', width: '100%', minHeight: '120px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: 'var(--shadow-sm)' }}>
+                            <div style={{ background: 'rgba(255,255,255,0.05)', padding: '1.5rem', borderRadius: 'var(--radius-md)', width: '100%', minHeight: '120px', border: '1px solid rgba(255,255,255,0.1)' }}>
                                 {heartTab === 'company' && (
                                     <div className="animate-fade-in">
                                         <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Core Commitment</h4>
-                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#475569' }}>We find ways to subsidize and support our team financially, ensuring that our success is shared and everyone has the resources to thrive both at work and at home.</p>
+                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-gray-dark)' }}>We find ways to subsidize and support our team financially, ensuring that our success is shared and everyone has the resources to thrive both at work and at home.</p>
                                     </div>
                                 )}
                                 {heartTab === 'customer' && (
                                     <div className="animate-fade-in">
                                         <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Empathy Driven Sales</h4>
-                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#475569' }}>We treat every customer interaction with genuine heart. By prioritizing their needs and well-being, we build relationships that last and results that speak for themselves.</p>
+                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-gray-dark)' }}>We treat every customer interaction with genuine heart. By prioritizing their needs and well-being, we build relationships that last and results that speak for themselves.</p>
                                     </div>
                                 )}
                                 {heartTab === 'employees' && (
                                     <div className="animate-fade-in">
                                         <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Mutual Support</h4>
-                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#475569' }}>We support other departments through small acts that make a big difference—whether it&apos;s bringing lunch for a busy team or taking the time to express gratitude in person.</p>
+                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-gray-dark)' }}>We support other departments through small acts that make a big difference—whether it&apos;s bringing lunch for a busy team or taking the time to express gratitude in person.</p>
                                     </div>
                                 )}
                                 {heartTab === 'personal' && (
                                     <div className="animate-fade-in">
                                         <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>The Best Version of You</h4>
-                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#475569' }}>Thinking with your heart means being the best employee you can be—not just for the targets, but out of respect for your craft and your colleagues.</p>
+                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-gray-dark)' }}>Thinking with your heart means being the best employee you can be—not just for the targets, but out of respect for your craft and your colleagues.</p>
                                     </div>
                                 )}
                             </div>
@@ -154,23 +154,23 @@ export default function CulturePage() {
                                 <button onClick={() => setGratitudeTab('vacations')} className={`btn btn-sm ${gratitudeTab === 'vacations' ? 'btn-primary' : 'btn-outline'}`} style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}>Vacations</button>
                             </div>
 
-                            <div style={{ background: '#FFFFFF', padding: '1.5rem', borderRadius: 'var(--radius-md)', width: '100%', minHeight: '120px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: 'var(--shadow-sm)' }}>
+                            <div style={{ background: 'rgba(255,255,255,0.05)', padding: '1.5rem', borderRadius: 'var(--radius-md)', width: '100%', minHeight: '120px', border: '1px solid rgba(255,255,255,0.1)' }}>
                                 {gratitudeTab === 'owner' && (
                                     <div className="animate-fade-in">
                                         <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>A Personal Thank You</h4>
-                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#475569' }}>Our staying in gratitude program is a direct expression of the owner&apos;s attitude toward excellence. When you go above and beyond, it doesn&apos;t go unnoticed—it is rewarded deeply.</p>
+                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-gray-dark)' }}>Our staying in gratitude program is a direct expression of the owner&apos;s attitude toward excellence. When you go above and beyond, it doesn&apos;t go unnoticed—it is rewarded deeply.</p>
                                     </div>
                                 )}
                                 {gratitudeTab === 'staycations' && (
                                     <div className="animate-fade-in">
                                         <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Oceanfront Retreats</h4>
-                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#475569' }}>For those recognized, we offer exclusive access to reserve a house on the oceanfront of Virginia Beach. We also provide gift certificates to premium restaurants for rest and recharge.</p>
+                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-gray-dark)' }}>For those recognized, we offer exclusive access to reserve a house on the oceanfront of Virginia Beach. We also provide gift certificates to premium restaurants for rest and recharge.</p>
                                     </div>
                                 )}
                                 {gratitudeTab === 'vacations' && (
                                     <div className="animate-fade-in">
                                         <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>World-Class Getaways</h4>
-                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#475569' }}>Our Vacations provide airline tickets for two and spending money to stay in the company&apos;s premium properties: choose between a <strong>two-bedroom apartment in Manhattan</strong> or a <strong>one-bedroom apartment in San Francisco</strong>, offering an elite urban retreat for our top performers.</p>
+                                        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-gray-dark)' }}>Our Vacations provide airline tickets for two and spending money to stay in the company&apos;s premium properties: choose between a <strong>two-bedroom apartment in Manhattan</strong> or a <strong>one-bedroom apartment in San Francisco</strong>, offering an elite urban retreat for our top performers.</p>
                                     </div>
                                 )}
                             </div>
