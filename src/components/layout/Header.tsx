@@ -57,9 +57,6 @@ export default function Header() {
                             {link.label}
                         </Link>
                     ))}
-                    <Link href="/apply" className="nav-link nav-cta">
-                        Apply Now
-                    </Link>
                 </nav>
             </div>
         </header>

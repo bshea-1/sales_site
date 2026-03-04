@@ -25,16 +25,7 @@ export default function Home() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection className="hero-content hero-content-lower" delay={200}>
-          <p className="hero-subheadline">
-            Join the <strong>#1 Furniture Retailer in America</strong>. We don&apos;t just offer jobs;
-            we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
-          </p>
-          <Link href="/apply" className="btn btn-primary btn-glow btn-large">
-            CLICK HERE TO APPLY
-          </Link>
-        </AnimatedSection>
-        <AnimatedSection className="hero-stats" delay={300}>
+        <AnimatedSection className="hero-stats" delay={200}>
           <div className="hero-stat">
             <Counter target={75} prefix="$" suffix="K*" />
             <span className="stat-desc">Lowest Sales Person Earnings</span>
@@ -48,11 +39,20 @@ export default function Home() {
             <span className="stat-desc">Years of Excellence</span>
           </div>
         </AnimatedSection>
-        <AnimatedSection delay={500}>
-          <ScrollIndicator />
+        <AnimatedSection delay={300}>
           <p className="earnings-disclaimer">
             *Sales Associates hired prior to January 1st, 2024. Individual results vary.
           </p>
+        </AnimatedSection>
+
+        <AnimatedSection className="hero-content hero-content-lower" delay={400}>
+          <p className="hero-subheadline">
+            Join the <strong>#1 Furniture Retailer in America</strong>. We don&apos;t just offer jobs;
+            we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
+          </p>
+        </AnimatedSection>
+        <AnimatedSection delay={500}>
+          <ScrollIndicator />
         </AnimatedSection>
       </section>
 
