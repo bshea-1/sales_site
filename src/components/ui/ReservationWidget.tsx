@@ -3,8 +3,6 @@
 import React, { useState } from 'react';
 
 export default function ReservationWidget() {
-    const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
-
     const generateTimeSlots = () => {
         const slots = [];
         let startHour = 11;
@@ -28,40 +26,6 @@ export default function ReservationWidget() {
 
     const slots = generateTimeSlots();
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setStatus('submitting');
-
-        const form = e.currentTarget;
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            });
-
-            if (response.ok) {
-                setStatus('success');
-            } else {
-                console.error("Form submission failed");
-                setStatus('idle');
-            }
-        } catch (error) {
-            console.error("Form submission error", error);
-            setStatus('idle');
-        }
-    };
-
-    if (status === 'success') {
-        return (
-            <div className="glass-card" style={{ maxWidth: '400px', width: '100%', padding: '2rem', textAlign: 'center', background: 'rgba(255, 255, 255, 0.1)' }}>
-                <h3 style={{ marginBottom: '1rem', color: 'var(--color-primary)', fontSize: '1.5rem', fontFamily: 'var(--ff-heading)' }}>Reservation Confirmed!</h3>
-                <p style={{ color: 'var(--color-white)', lineHeight: 1.6 }}>We look forward to seeing you at the job fair. We have saved your spot!</p>
-            </div>
-        );
-    }
-
     return (
         <div className="glass-card widget-container" style={{ width: '100%', padding: '2rem', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
             <h3 style={{ marginBottom: '1.5rem', fontSize: '1.2rem', fontWeight: 700, textAlign: 'center', color: '#fff', lineHeight: 1.4, fontFamily: 'var(--ff-heading)' }}>
@@ -69,7 +33,7 @@ export default function ReservationWidget() {
                 <span style={{ color: 'var(--color-primary)' }}>See you there!</span>
             </h3>
 
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <form action="https://api.web3forms.com/submit" method="POST" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <input type="hidden" name="access_key" value="96b45f96-a042-40df-a7da-40a0cde3faa5" />
                 <input type="hidden" name="name" value="Job Fair Attendee" />
 
@@ -113,7 +77,6 @@ export default function ReservationWidget() {
                 <button
                     type="submit"
                     className="btn btn-primary"
-                    disabled={status === 'submitting'}
                     style={{
                         padding: '0.8rem',
                         fontSize: '1rem',
@@ -123,7 +86,7 @@ export default function ReservationWidget() {
                         justifyContent: 'center'
                     }}
                 >
-                    {status === 'submitting' ? 'Reserving...' : 'Reserve Time Slot'}
+                    Reserve Time Slot
                 </button>
             </form>
         </div>

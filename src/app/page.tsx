@@ -11,9 +11,8 @@ export default function Home() {
       <section className="hero">
         <div className="hero-background" />
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%', maxWidth: '1200px', margin: '0 auto', gap: '3rem', zIndex: 2, position: 'relative', alignItems: 'center', justifyContent: 'center' }}>
-
-          <div style={{ flex: '1 1 500px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="hero-layout">
+          <div className="hero-left-col">
             <AnimatedSection className="hero-content hero-content-upper">
               <h1 className="hero-headline">
                 JOIN US AT OUR NEXT<br />
@@ -44,6 +43,7 @@ export default function Home() {
                 <span className="stat-desc">Years of Excellence</span>
               </div>
             </AnimatedSection>
+
             <AnimatedSection delay={300}>
               <p className="earnings-disclaimer">
                 *Sales Associates hired prior to January 1st, 2024. Individual results vary.
@@ -58,14 +58,11 @@ export default function Home() {
             </AnimatedSection>
           </div>
 
-          <div style={{ flex: '1 1 400px', maxWidth: '450px', width: '100%', display: 'flex', justifyContent: 'center' }}>
-            <div style={{ width: '100%' }}>
-              <AnimatedSection delay={500}>
-                <ReservationWidget />
-              </AnimatedSection>
-            </div>
+          <div className="hero-right-col">
+            <AnimatedSection delay={500}>
+              <ReservationWidget />
+            </AnimatedSection>
           </div>
-
         </div>
 
         <div style={{ zIndex: 2, position: 'relative', width: '100%' }}>
