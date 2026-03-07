@@ -28,11 +28,29 @@ export default function ReservationWidget() {
 
     const slots = generateTimeSlots();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setStatus('submitting');
-        // Simulate a network request
-        setTimeout(() => setStatus('success'), 1000);
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            if (response.ok) {
+                setStatus('success');
+            } else {
+                console.error("Form submission failed");
+                setStatus('idle');
+            }
+        } catch (error) {
+            console.error("Form submission error", error);
+            setStatus('idle');
+        }
     };
 
     if (status === 'success') {
@@ -45,14 +63,18 @@ export default function ReservationWidget() {
     }
 
     return (
-        <div className="glass-card" style={{ maxWidth: '450px', width: '100%', padding: '2rem', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
+        <div className="glass-card widget-container" style={{ width: '100%', padding: '2rem', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
             <h3 style={{ marginBottom: '1.5rem', fontSize: '1.2rem', fontWeight: 700, textAlign: 'center', color: '#fff', lineHeight: 1.4, fontFamily: 'var(--ff-heading)' }}>
                 Please Reserve a time slot or just show up! <br />
                 <span style={{ color: 'var(--color-primary)' }}>See you there!</span>
             </h3>
 
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <input type="hidden" name="access_key" value="96b45f96-a042-40df-a7da-40a0cde3faa5" />
+                <input type="hidden" name="name" value="Job Fair Attendee" />
+
                 <select
+                    name="message"
                     required
                     style={{
                         padding: '0.8rem 1rem',
@@ -73,6 +95,7 @@ export default function ReservationWidget() {
                 </select>
 
                 <input
+                    name="email"
                     type="email"
                     placeholder="Enter your email address"
                     required

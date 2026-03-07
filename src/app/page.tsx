@@ -10,54 +10,69 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-background" />
-        <AnimatedSection className="hero-content hero-content-upper">
-          <h1 className="hero-headline">
-            JOIN US AT OUR NEXT<br />
-            <span className="highlight">SALES ASSOCIATE<br />JOB FAIR</span>
-          </h1>
-        </AnimatedSection>
 
-        <AnimatedSection className="hero-content hero-event-details" delay={100}>
-          <div className="event-info">
-            <p className="event-date">Thursday, March 19th</p>
-            <p className="event-time">11 AM – 7 PM</p>
-            <p className="event-address">Ashley Outlet</p>
-            <p className="event-address">5129 Virginia Beach Blvd</p>
-          </div>
-        </AnimatedSection>
+        <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%', maxWidth: '1200px', margin: '0 auto', gap: '3rem', zIndex: 2, position: 'relative', alignItems: 'center', justifyContent: 'center' }}>
 
-        <AnimatedSection className="hero-stats" delay={200}>
-          <div className="hero-stat">
-            <Counter target={75} prefix="$" suffix="K*" />
-            <span className="stat-desc">Lowest Sales Person Earnings</span>
-          </div>
-          <div className="hero-stat">
-            <Counter target={98} prefix="$" suffix="K*" />
-            <span className="stat-desc">Average Sales Person Earnings</span>
-          </div>
-          <div className="hero-stat">
-            <Counter target={78} suffix="+" />
-            <span className="stat-desc">Years of Excellence</span>
-          </div>
-        </AnimatedSection>
-        <AnimatedSection delay={300}>
-          <p className="earnings-disclaimer">
-            *Sales Associates hired prior to January 1st, 2024. Individual results vary.
-          </p>
-        </AnimatedSection>
+          <div style={{ flex: '1 1 500px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <AnimatedSection className="hero-content hero-content-upper">
+              <h1 className="hero-headline">
+                JOIN US AT OUR NEXT<br />
+                <span className="highlight">SALES ASSOCIATE<br />JOB FAIR</span>
+              </h1>
+            </AnimatedSection>
 
-        <AnimatedSection className="hero-content hero-content-lower" delay={400}>
-          <p className="hero-subheadline">
-            Join the <strong>#1 Furniture Retailer in America</strong>. We don&apos;t just offer jobs;
-            we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
-          </p>
-          <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
-            <ReservationWidget />
+            <AnimatedSection className="hero-content hero-event-details" delay={100}>
+              <div className="event-info">
+                <p className="event-date">Thursday, March 19th</p>
+                <p className="event-time">11 AM – 7 PM</p>
+                <p className="event-address">Ashley Outlet</p>
+                <p className="event-address">5129 Virginia Beach Blvd</p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection className="hero-stats" delay={200}>
+              <div className="hero-stat">
+                <Counter target={75} prefix="$" suffix="K*" />
+                <span className="stat-desc">Lowest Sales Person Earnings</span>
+              </div>
+              <div className="hero-stat">
+                <Counter target={98} prefix="$" suffix="K*" />
+                <span className="stat-desc">Average Sales Person Earnings</span>
+              </div>
+              <div className="hero-stat">
+                <Counter target={78} suffix="+" />
+                <span className="stat-desc">Years of Excellence</span>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={300}>
+              <p className="earnings-disclaimer">
+                *Sales Associates hired prior to January 1st, 2024. Individual results vary.
+              </p>
+            </AnimatedSection>
+
+            <AnimatedSection className="hero-content hero-content-lower" delay={400}>
+              <p className="hero-subheadline">
+                Join the <strong>#1 Furniture Retailer in America</strong>. We don&apos;t just offer jobs;
+                we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
+              </p>
+            </AnimatedSection>
           </div>
-        </AnimatedSection>
-        <AnimatedSection delay={500}>
-          <ScrollIndicator />
-        </AnimatedSection>
+
+          <div style={{ flex: '1 1 400px', maxWidth: '450px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ width: '100%' }}>
+              <AnimatedSection delay={500}>
+                <ReservationWidget />
+              </AnimatedSection>
+            </div>
+          </div>
+
+        </div>
+
+        <div style={{ zIndex: 2, position: 'relative', width: '100%' }}>
+          <AnimatedSection delay={600}>
+            <ScrollIndicator />
+          </AnimatedSection>
+        </div>
       </section>
 
       {/* WHY GRAND BRANDS SECTION */}
