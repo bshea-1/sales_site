@@ -2,6 +2,7 @@ import Link from 'next/link';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import Counter from '@/components/ui/Counter';
 import ScrollIndicator from '@/components/ui/ScrollIndicator';
+import ReservationWidget from '@/components/ui/ReservationWidget';
 
 export default function Home() {
   return (
@@ -50,6 +51,9 @@ export default function Home() {
             Join the <strong>#1 Furniture Retailer in America</strong>. We don&apos;t just offer jobs;
             we offer <em>financial security</em>, <em>belonging</em>, and a path to <em>going above and beyond</em>.
           </p>
+          <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+            <ReservationWidget />
+          </div>
         </AnimatedSection>
         <AnimatedSection delay={500}>
           <ScrollIndicator />
