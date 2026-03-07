@@ -35,7 +35,8 @@ export default function ReservationWidget() {
 
             <form action="https://api.web3forms.com/submit" method="POST" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <input type="hidden" name="access_key" value="96b45f96-a042-40df-a7da-40a0cde3faa5" />
-                <input type="hidden" name="name" value="Job Fair Attendee" />
+                <input type="hidden" name="from_name" value="Job Fair Event" />
+                <input type="hidden" name="subject" value="New Job Fair Reservation" />
 
                 <select
                     name="message"
