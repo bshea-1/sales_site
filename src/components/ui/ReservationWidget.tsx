@@ -42,13 +42,13 @@ export default function ReservationWidget() {
                     name="message"
                     required
                     style={{
-                        padding: '0.8rem 1rem',
+                        padding: '1.1rem 1.25rem',
                         borderRadius: 'var(--radius-sm)',
                         border: '1px solid rgba(255,255,255,0.2)',
                         background: 'rgba(0,0,0,0.5)',
                         color: '#fff',
                         fontFamily: 'inherit',
-                        fontSize: '1rem',
+                        fontSize: '1.15rem',
                         appearance: 'none',
                         cursor: 'pointer'
                     }}
