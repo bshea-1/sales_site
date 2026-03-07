@@ -636,16 +636,16 @@ em {
 
   .hero-left-col {
     flex: 1 1 600px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .hero-left-col .hero-content,
   .hero-left-col .event-info {
-    text-align: left;
+    text-align: center;
   }
 
   .hero-left-col .hero-stats {
-    align-self: flex-start;
+    align-self: center;
     max-width: 100%;
   }
 
